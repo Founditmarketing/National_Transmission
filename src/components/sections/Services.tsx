@@ -46,10 +46,7 @@ export const Services = () => {
         </div>
       </div>
       
-      {/* Decorative side text */}
-      <div className="absolute right-0 top-1/2 -translate-y-1/2 rotate-90 origin-right pointer-events-none opacity-5 hidden xl:block">
-        <span className="text-9xl font-display uppercase tracking-widest">PRECISION</span>
-      </div>
+
     </section>
   );
 };

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Outer Hexagon Rim -->
+  <path fill="var(--color, #e2e4e9)" d="M50 5 L95 30 L95 70 L50 95 L5 70 L5 30 Z M50 15 L15 35 L15 65 L50 85 L85 65 L85 35 Z" fill-rule="evenodd" />
+  
+  <!-- "T" Core Pillar -->
+  <path fill="var(--color, #e2e4e9)" d="M45 25 L55 25 L55 35 L50 35 L50 80 L45 80 Z" />
+  <path fill="var(--color, #e2e4e9)" d="M55 25 L65 25 L65 35 L55 35 Z" />
+  
+  <!-- "N" Left Shape -->
+  <path fill="var(--color, #e2e4e9)" d="M42 22 L58 22 L58 35 L52 35 L52 80 L48 80 L48 35 L42 35 Z" />
+  <path fill="var(--color, #e2e4e9)" d="M22 45 L34 38 L34 80 L28 80 L28 55 L22 60 L22 80 L16 80 L16 48 L22 45 Z" />
+  
+  <!-- "A" Right Shape -->
+  <path fill="var(--color, #e2e4e9)" d="M78 45 L66 38 L66 80 L72 80 L72 65 L78 65 L78 80 L84 80 L84 48 L78 45 Z" />
+  <path fill="none" stroke="var(--color, #e2e4e9)" stroke-width="6" d="M72 52 L78 52" />
+</svg>

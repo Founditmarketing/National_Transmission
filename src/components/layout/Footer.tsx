@@ -13,8 +13,8 @@ export const Footer = () => {
           {/* Brand Column */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center gap-2">
-              <div className="w-8 h-8 bg-precision-blue flex items-center justify-center bevel-cut">
-                <span className="text-white font-display text-xl">N</span>
+              <div className="w-10 h-10 flex items-center justify-center">
+                <img src="/favicon.png" alt="NTA Logo" className="w-full h-full object-contain" />
               </div>
               <span className="font-display text-2xl tracking-tighter">NATIONAL TIRE & AUTO</span>
             </Link>

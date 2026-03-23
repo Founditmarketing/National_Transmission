@@ -41,7 +41,7 @@ export const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center gap-2 group">
           <div className="w-10 h-10 flex items-center justify-center transform group-hover:rotate-12 transition-transform duration-300">
-            <img src="/favicon.png" alt="NTA Logo" className="w-full h-full object-contain" />
+            <img src="/favicon-transparent.svg" alt="NTA Logo" className="w-full h-full object-contain" />
           </div>
           <div className="flex flex-col">
             <span className="font-display text-xl leading-none tracking-tighter">NATIONAL</span>

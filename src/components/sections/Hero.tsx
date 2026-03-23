@@ -1,11 +1,13 @@
 import { motion } from 'motion/react';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Button } from '../ui/Button';
 import { COMPANY_INFO } from '../../constants';
 import { ArrowRight, Zap } from 'lucide-react';
 import { cn } from '../../lib/utils';
 
 export const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <section className="relative min-h-[90vh] flex items-center overflow-hidden industrial-grid">
       {/* Background Elements */}
@@ -81,16 +83,12 @@ export const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/#services">
-                <Button size="lg" className="flex items-center gap-2">
-                  View Services <ArrowRight size={20} />
-                </Button>
-              </Link>
-              <Link to="/contact">
-                <Button variant="outline" size="lg">
-                  Get Free Estimate
-                </Button>
-              </Link>
+              <Button size="lg" className="flex items-center gap-2" onClick={() => navigate('/contact')}>
+                View Services <ArrowRight size={20} />
+              </Button>
+              <Button variant="outline" size="lg" onClick={() => navigate('/contact')}>
+                Get Free Estimate
+              </Button>
             </div>
             
           </motion.div>

@@ -88,26 +88,27 @@ export const Hero = () => {
               </Button>
             </div>
             
-            <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-8 border-t border-white/10 pt-8">
-              <div>
-                <p className="font-mono text-precision-blue text-2xl font-bold">20+</p>
-                <p className="text-xs uppercase tracking-widest text-steel-aluminum">Years Experience</p>
-              </div>
-              <div>
-                <p className="font-mono text-precision-blue text-2xl font-bold">2</p>
-                <p className="text-xs uppercase tracking-widest text-steel-aluminum">Convenient Locations</p>
-              </div>
-              <div className="hidden md:block">
-                <p className="font-mono text-precision-blue text-2xl font-bold">100%</p>
-                <p className="text-xs uppercase tracking-widest text-steel-aluminum">Certified Technicians</p>
-              </div>
-            </div>
           </motion.div>
         </div>
       </div>
-      
-      {/* Bottom Diagonal Cut Decoration */}
-      <div className="absolute bottom-0 left-0 w-full h-24 bg-steel-black skew-y-[-2deg] origin-bottom-left" />
+
+      {/* Stats Strip — pinned to bottom */}
+      <div className="absolute bottom-0 left-0 w-full z-10 border-t border-b border-white/15 bg-steel-black/60 backdrop-blur-sm">
+        <div className="container mx-auto px-4 py-6 grid grid-cols-2 md:grid-cols-3 gap-8">
+          <div>
+            <p className="font-mono text-precision-blue text-2xl font-bold">20+</p>
+            <p className="text-xs uppercase tracking-widest text-steel-aluminum">Years Experience</p>
+          </div>
+          <div>
+            <p className="font-mono text-precision-blue text-2xl font-bold">2</p>
+            <p className="text-xs uppercase tracking-widest text-steel-aluminum">Convenient Locations</p>
+          </div>
+          <div className="hidden md:block">
+            <p className="font-mono text-precision-blue text-2xl font-bold">100%</p>
+            <p className="text-xs uppercase tracking-widest text-steel-aluminum">Certified Technicians</p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 };

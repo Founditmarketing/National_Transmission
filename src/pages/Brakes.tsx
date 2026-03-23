@@ -23,10 +23,9 @@ export const Brakes = () => {
         <div className="relative order-2 lg:order-1">
           <div className="aspect-video bg-steel-gunmetal bevel-cut overflow-hidden border border-white/10">
             <img 
-              src="https://picsum.photos/seed/brakes/800/600" 
+              src="/images/brakes.png" 
               alt="Brake Service" 
-              className="w-full h-full object-cover opacity-50"
-              referrerPolicy="no-referrer"
+              className="w-full h-full object-cover"
             />
           </div>
           <div className="absolute -top-8 -right-8 bg-precision-blue p-8 bevel-cut hidden md:block">

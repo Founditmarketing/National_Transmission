@@ -26,10 +26,9 @@ export const About = () => {
           >
             <div className="aspect-square bg-steel-gunmetal bevel-cut overflow-hidden relative group">
               <img 
-                src="https://picsum.photos/seed/mechanic/800/800" 
+                src="/images/about.png" 
                 alt="Professional Mechanic" 
-                className="w-full h-full object-cover opacity-60 group-hover:scale-110 transition-transform duration-700"
-                referrerPolicy="no-referrer"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-steel-black via-transparent to-transparent" />
               

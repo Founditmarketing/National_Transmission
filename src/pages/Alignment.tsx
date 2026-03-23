@@ -38,10 +38,9 @@ export const Alignment = () => {
         <div className="relative">
           <div className="aspect-video bg-steel-gunmetal bevel-cut overflow-hidden border border-white/10">
             <img 
-              src="https://picsum.photos/seed/alignment/800/600" 
+              src="/images/alignment.png" 
               alt="Alignment Service" 
-              className="w-full h-full object-cover opacity-50"
-              referrerPolicy="no-referrer"
+              className="w-full h-full object-cover"
             />
           </div>
           <div className="absolute -bottom-8 -right-8 bg-precision-blue p-8 bevel-cut hidden md:block">

@@ -1,6 +1,7 @@
 import { SectionHeading } from '../components/ui/SectionHeading';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
+import { Link } from 'react-router-dom';
 import { CheckCircle2, Settings } from 'lucide-react';
 
 export const Alignment = () => {
@@ -31,7 +32,9 @@ export const Alignment = () => {
           </p>
           
           <div className="pt-6">
-            <Button size="lg">Schedule Alignment</Button>
+            <Link to="/contact">
+              <Button size="lg">Schedule Alignment</Button>
+            </Link>
           </div>
         </div>
         

@@ -1,6 +1,7 @@
 import { SectionHeading } from '../components/ui/SectionHeading';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
+import { Link } from 'react-router-dom';
 import { CheckCircle2, Activity } from 'lucide-react';
 
 export const Suspension = () => {
@@ -46,7 +47,9 @@ export const Suspension = () => {
           </p>
           
           <div className="pt-6">
-            <Button size="lg">Inspect My Suspension</Button>
+            <Link to="/contact">
+              <Button size="lg">Inspect My Suspension</Button>
+            </Link>
           </div>
         </div>
       </div>

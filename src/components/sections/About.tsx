@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { SectionHeading } from '../ui/SectionHeading';
 import { Button } from '../ui/Button';
 import { CheckCircle2 } from 'lucide-react';
@@ -76,7 +77,9 @@ export const About = () => {
               ))}
             </div>
 
-            <Button variant="primary">Learn More About Us</Button>
+            <Link to="/contact">
+              <Button variant="primary">Learn More About Us</Button>
+            </Link>
           </div>
         </div>
       </div>

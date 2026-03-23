@@ -1,6 +1,7 @@
 import { SectionHeading } from '../components/ui/SectionHeading';
 import { Card } from '../components/ui/Card';
 import { Button } from '../components/ui/Button';
+import { Link } from 'react-router-dom';
 import { CheckCircle2, CircleDot } from 'lucide-react';
 
 export const Tires = () => {
@@ -33,7 +34,9 @@ export const Tires = () => {
           </p>
           
           <div className="pt-6">
-            <Button size="lg">Get a Tire Quote</Button>
+            <Link to="/contact">
+              <Button size="lg">Get a Tire Quote</Button>
+            </Link>
           </div>
         </div>
         

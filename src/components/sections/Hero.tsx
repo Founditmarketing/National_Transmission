@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import { Link } from 'react-router-dom';
 import { Button } from '../ui/Button';
 import { COMPANY_INFO } from '../../constants';
 import { ArrowRight, Zap } from 'lucide-react';
@@ -80,12 +81,16 @@ export const Hero = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">
-              <Button size="lg" className="flex items-center gap-2">
-                View Services <ArrowRight size={20} />
-              </Button>
-              <Button variant="outline" size="lg">
-                Get Free Estimate
-              </Button>
+              <Link to="/#services">
+                <Button size="lg" className="flex items-center gap-2">
+                  View Services <ArrowRight size={20} />
+                </Button>
+              </Link>
+              <Link to="/contact">
+                <Button variant="outline" size="lg">
+                  Get Free Estimate
+                </Button>
+              </Link>
             </div>
             
           </motion.div>

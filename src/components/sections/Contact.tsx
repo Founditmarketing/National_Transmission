@@ -49,7 +49,7 @@ export const Contact = () => {
             {/* Map Placeholder */}
             <div className="aspect-video bg-steel-gunmetal bevel-cut overflow-hidden border border-white/10 relative group">
               <iframe 
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3434.333333333333!2d-92.4!3d31.4!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzHCsDI0JzAwLjAiTiA5MsKwMjQnMDAuMCJX!5e0!3m2!1sen!2sus!4v1234567890" 
+                src="https://www.google.com/maps/d/u/0/embed?mid=1xHqTFQwnapsi7LWVdT2_cvNRMtZmi_Q&ehbc=2E312F&noprof=1" 
                 width="100%" 
                 height="100%" 
                 style={{ border: 0, filter: 'grayscale(1) invert(1) contrast(1.2)' }} 

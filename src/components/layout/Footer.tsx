@@ -119,10 +119,6 @@ export const Footer = () => {
           <p className="text-steel-aluminum text-sm font-light">
             © {new Date().getFullYear()} National Tire & Auto. All rights reserved.
           </p>
-          <div className="flex gap-8 text-xs text-steel-aluminum uppercase tracking-widest">
-            <Link to="/privacy" className="hover:text-precision-blue">Privacy Policy</Link>
-            <Link to="/terms" className="hover:text-precision-blue">Terms of Service</Link>
-          </div>
         </div>
       </div>
     </footer>

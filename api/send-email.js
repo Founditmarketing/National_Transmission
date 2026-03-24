@@ -28,7 +28,7 @@ export default async function handler(req) {
       },
       body: JSON.stringify({
         from: 'National Tire & Auto <hello@nattireauto.com>',
-        to: 'jason@founditmarketing.com',
+        to: 'nattransmission@gmail.com',
         reply_to: email,
         subject: `New Estimate Request: ${service || 'General Inquiry'} — ${name}`,
         html: `

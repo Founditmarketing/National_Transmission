@@ -96,8 +96,9 @@ export default async function handler(req) {
 
     if (!res.ok) {
       console.error('Resend API error:', data);
+      const errorMessage = data?.message || data?.error?.message || 'Failed to send email';
       return new Response(
-        JSON.stringify({ error: 'Failed to send email', details: data }),
+        JSON.stringify({ error: errorMessage, details: data }),
         { status: 500, headers: { 'Content-Type': 'application/json' } }
       );
     }

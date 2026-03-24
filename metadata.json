@@ -1,0 +1,5 @@
+{
+  "name": "National Tire & Auto",
+  "description": "Precision automotive services in Central Louisiana. Specializing in tires, brakes, alignment, and suspension with over 20 years of expertise.",
+  "requestFramePermissions": ["geolocation"]
+}

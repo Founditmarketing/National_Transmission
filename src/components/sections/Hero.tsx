@@ -9,7 +9,7 @@ export const Hero = () => {
   const navigate = useNavigate();
 
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden industrial-grid">
+    <section className="relative min-h-[90vh] pb-32 flex items-center overflow-hidden industrial-grid">
       {/* Background Elements */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-precision-blue-dark/50 skew-x-[-15deg] translate-x-1/4 z-0" />
       

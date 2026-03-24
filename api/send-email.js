@@ -27,7 +27,7 @@ export default async function handler(req) {
         Authorization: `Bearer ${process.env.RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: 'National Tire & Auto <onboarding@resend.dev>',
+        from: 'National Tire & Auto <hello@nattireauto.com>',
         to: 'nattransmission@gmail.com',
         reply_to: email,
         subject: `New Estimate Request: ${service || 'General Inquiry'} — ${name}`,

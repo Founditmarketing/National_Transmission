@@ -73,13 +73,13 @@ export const Hero = () => {
             </div>
             
             <h1 className="text-6xl md:text-8xl lg:text-9xl mb-6 leading-[0.85] tracking-tighter">
-              PRECISION.<br />
-              <span className="text-industrial-red">POWER.</span><br />
-              PERFORMANCE.
+              TRANSMISSION<br />
+              <span className="text-industrial-red">REPAIR</span> &<br />
+              AUTO SERVICE
             </h1>
             
             <p className="text-xl md:text-2xl text-steel-aluminum mb-10 max-w-xl font-light leading-relaxed">
-              Proudly serving Central Louisiana with exceptional tire and automotive services for over 20 years.
+              Pineville & Alexandria, Louisiana's trusted shop for transmission repair, brake service, tire sales, and complete auto care — serving Central Louisiana for over 20 years.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4">

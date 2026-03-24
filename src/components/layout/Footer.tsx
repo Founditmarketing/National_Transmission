@@ -1,16 +1,16 @@
 import { Link } from 'react-router-dom';
 import { Facebook, Mail, Phone, MapPin, Clock, ArrowRight } from 'lucide-react';
-import { COMPANY_INFO, SERVICES } from '../../constants';
+import { COMPANY_INFO } from '../../constants';
+import { ALL_SERVICES, SERVICE_CATEGORIES } from '../../data/serviceData';
 
 export const Footer = () => {
   return (
     <footer className="bg-precision-blue-dark pt-20 pb-10 border-t border-white/5 relative overflow-hidden">
-      {/* Background decoration */}
       <div className="absolute top-0 right-0 w-1/3 h-full bg-precision-blue/5 skew-x-[-20deg] translate-x-1/2 pointer-events-none" />
-      
+
       <div className="container mx-auto px-4 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-          {/* Brand Column */}
+          {/* Brand */}
           <div className="space-y-6">
             <Link to="/" className="flex items-center gap-2">
               <div className="w-10 h-10 flex items-center justify-center">
@@ -19,61 +19,58 @@ export const Footer = () => {
               <span className="font-display text-2xl tracking-tighter">NATIONAL TIRE & AUTO</span>
             </Link>
             <p className="text-steel-aluminum leading-relaxed font-light">
-              Central Louisiana's premier destination for precision automotive care. Over 20 years of excellence in tires, brakes, and suspension.
+              Central Louisiana's premier destination for transmission repair, brake service, tire sales, and precision automotive care. Over 20 years of excellence.
             </p>
             <div className="flex gap-4">
-              <a 
-                href={COMPANY_INFO.facebookUrl} 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="w-10 h-10 bg-white/5 flex items-center justify-center hover:bg-precision-blue transition-colors duration-300"
-              >
+              <a href={COMPANY_INFO.facebookUrl} target="_blank" rel="noopener noreferrer" className="w-10 h-10 bg-white/5 flex items-center justify-center hover:bg-precision-blue transition-colors duration-300">
                 <Facebook size={20} />
               </a>
-              <a 
-                href={`mailto:${COMPANY_INFO.email}`}
-                className="w-10 h-10 bg-white/5 flex items-center justify-center hover:bg-precision-blue transition-colors duration-300"
-              >
+              <a href={`mailto:${COMPANY_INFO.email}`} className="w-10 h-10 bg-white/5 flex items-center justify-center hover:bg-precision-blue transition-colors duration-300">
                 <Mail size={20} />
               </a>
             </div>
           </div>
 
-          {/* Services Column */}
+          {/* Services Column 1 */}
           <div>
             <h3 className="text-xl mb-6 flex items-center gap-2">
               <span className="w-2 h-2 bg-precision-blue" />
-              OUR SERVICES
+              SERVICES
             </h3>
-            <ul className="space-y-4">
-              {SERVICES.map((service) => (
-                <li key={service.id}>
-                  <Link 
-                    to={service.path}
-                    className="text-steel-aluminum hover:text-precision-blue transition-colors flex items-center gap-2 group"
-                  >
-                    <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
-                    {service.title}
-                  </Link>
-                </li>
-              ))}
+            <ul className="space-y-2">
+              {SERVICE_CATEGORIES.slice(0, 3).map((cat) => {
+                const catServices = ALL_SERVICES.filter(s => s.category === cat.label || (cat.id === 'general' && s.category === 'General'));
+                return (
+                  <li key={cat.id} className="mb-4">
+                    <span className="text-xs font-mono uppercase tracking-widest text-industrial-red">{cat.label}</span>
+                    <ul className="mt-1 space-y-1">
+                      {catServices.slice(0, 3).map(s => (
+                        <li key={s.slug}>
+                          <Link to={`/${s.slug}`} className="text-sm text-steel-aluminum hover:text-precision-blue transition-colors flex items-center gap-1 group">
+                            <ArrowRight size={10} className="opacity-0 group-hover:opacity-100 transition-opacity" />
+                            {s.title}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                );
+              })}
             </ul>
           </div>
 
-          {/* Contact Column */}
+          {/* Contact */}
           <div>
             <h3 className="text-xl mb-6 flex items-center gap-2">
               <span className="w-2 h-2 bg-precision-blue" />
               GET IN TOUCH
             </h3>
             <ul className="space-y-4">
-              <li className="flex items-start gap-3 group">
+              <li className="flex items-start gap-3">
                 <Phone size={18} className="text-precision-blue mt-1" />
                 <div>
                   <p className="text-xs text-steel-aluminum font-mono uppercase tracking-widest mb-1">Call Us</p>
-                  <a href={`tel:${COMPANY_INFO.phone.replace(/\D/g, '')}`} className="text-lg font-mono hover:text-precision-blue transition-colors">
-                    {COMPANY_INFO.phone}
-                  </a>
+                  <a href={`tel:${COMPANY_INFO.phone.replace(/\D/g, '')}`} className="text-lg font-mono hover:text-precision-blue transition-colors">{COMPANY_INFO.phone}</a>
                 </div>
               </li>
               <li className="flex items-start gap-3">
@@ -93,7 +90,7 @@ export const Footer = () => {
             </ul>
           </div>
 
-          {/* Locations Column */}
+          {/* Locations */}
           <div>
             <h3 className="text-xl mb-6 flex items-center gap-2">
               <span className="w-2 h-2 bg-precision-blue" />

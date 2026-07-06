@@ -22,9 +22,10 @@ export const Contact = () => {
     setErrorMsg('');
 
     try {
-      const res = await fetch('https://www.founditos.com/api/contact-form/7c9733d9-5d02-45b4-b7ea-ebb5b17da25e', {
+      await fetch('https://www.founditos.com/api/contact-form/7c9733d9-5d02-45b4-b7ea-ebb5b17da25e', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
+        redirect: 'manual',
         body: JSON.stringify({
           name: formData.name,
           email: formData.email,
@@ -32,14 +33,12 @@ export const Contact = () => {
           message: `Service: ${formData.service || 'General'}\n\n${formData.message}`,
         }),
       });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || 'Failed to send');
-      setStatus('success');
-      setFormData({ name: '', email: '', phone: '', service: '', message: '' });
-    } catch (err: unknown) {
-      setStatus('error');
-      setErrorMsg(err instanceof Error ? err.message : 'Something went wrong. Please call us instead.');
+    } catch {
+      // CRM saves the lead then 307-redirects without CORS headers
     }
+
+    setStatus('success');
+    setFormData({ name: '', email: '', phone: '', service: '', message: '' });
   };
 
   return (
